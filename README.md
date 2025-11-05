@@ -34,10 +34,13 @@ mkdir ~/AppData/Local/nvim
 ```
 
 - Copy this config to ~/AppData/Local/nvim/init.vim
+- Bash:
 
 ```bash
 nvim
 ```
+
+- In nvim:
 
 ```nvim
 :PlugInstall
