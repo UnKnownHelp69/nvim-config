@@ -1,10 +1,10 @@
-" Fix для Windows
+" Fix for Windows
 scriptencoding utf-8
 set encoding=utf-8
 
 let g:python3_host_prog = expand('~/.venvs/neovim/Scripts/python.exe')
 
-" Настройка оболочки для Windows
+" Shell configuration for Windows
 if has('win32')
     set shell=pwsh
     set shellcmdflag=-Command
@@ -14,76 +14,76 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-" Улучшение интерфейса
-Plug 'nvim-tree/nvim-web-devicons'     " Иконки
-Plug 'akinsho/bufferline.nvim'         " Вкладки буферов
-Plug 'nvim-lualine/lualine.nvim'       " Статусная строка
-Plug 'preservim/nerdtree'              " Классический файловый менеджер
+" Interface improvements
+Plug 'nvim-tree/nvim-web-devicons'     " Icons
+Plug 'akinsho/bufferline.nvim'         " Buffer tabs
+Plug 'nvim-lualine/lualine.nvim'       " Status line
+Plug 'preservim/nerdtree'              " Classic file manager
 
-" Темы (оставьте только 1-2 любимые)
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }  " Стильная тема
-Plug 'folke/tokyonight.nvim'           " Фиолетово-синяя
-Plug 'rebelot/kanagawa.nvim'           " Спокойная японская
-Plug 'EdenEast/nightfox.nvim'          " Зелёно-синяя
-Plug 'navarasu/onedark.nvim'           " One Dark (как в VS Code)
+" Themes
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }  " Dark one
+Plug 'folke/tokyonight.nvim'           " Purple-blue
+Plug 'rebelot/kanagawa.nvim'           " Calm Japanese
+Plug 'EdenEast/nightfox.nvim'          " Green-blue
+Plug 'navarasu/onedark.nvim'           " One Dark
 
-" Синтаксис и подсветка
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Улучшенная подсветка
-Plug 'sheerun/vim-polyglot'            " Поддержка языков
+" Syntax and highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Enhanced highlighting
+Plug 'sheerun/vim-polyglot'            " Language support
 
-" Автодополнение и LSP
-Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Автодополнение
-Plug 'williamboman/mason.nvim'         " Менеджер LSP серверов
+" Autocompletion and LSP
+Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Autocompletion
+Plug 'williamboman/mason.nvim'         " LSP server manager
 Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'neovim/nvim-lspconfig'           " Конфигурация LSP
+Plug 'neovim/nvim-lspconfig'           " LSP configuration
 
-" Поиск и навигация
-Plug 'nvim-lua/plenary.nvim'           " Зависимость для Telescope
-Plug 'nvim-telescope/telescope.nvim'   " Супер-поиск
+" Search and navigation
+Plug 'nvim-lua/plenary.nvim'           " Dependency for Telescope
+Plug 'nvim-telescope/telescope.nvim'   " Super search
 
-" Редактирование
-Plug 'tpope/vim-surround'              " Работа с окружением
-Plug 'windwp/nvim-autopairs'           " Автозакрытие скобок
+" Editing
+Plug 'tpope/vim-surround'              " Working with surroundings
+Plug 'windwp/nvim-autopairs'           " Auto-closing brackets
 
-" Производительность
-Plug 'lewis6991/gitsigns.nvim'         " Git значки
-Plug 'tpope/vim-fugitive'              " Git интеграция
-Plug 'folke/which-key.nvim'            " Подсказки горячих клавиш
+" Productivity
+Plug 'lewis6991/gitsigns.nvim'         " Git icons
+Plug 'tpope/vim-fugitive'              " Git integration
+Plug 'folke/which-key.nvim'            " Hotkey hints
 
 call plug#end()
 
-" Основные настройки
-set mouse=a                            " Подключаем мышку
-set number                             " Нумерация строк
-set smarttab                           " Умные проставления табов 
-set tabstop=4                          " Чему равен один таб
-set shiftwidth=4                       " Количество пробелов для отступов
-set softtabstop=4                      " То же, что и tabstop, но в режиме вставки
-set expandtab                          " Замена табов на пробелы
-set autoindent                         " Автоматический отступ
-syntax on                              " Подсветка
-set termguicolors                      " Подключаем топ цвета
+" Basic settings
+set mouse=a                            " Enable mouse
+set number                             " Line numbers
+set smarttab                           " Smart tab placement
+set tabstop=4                          " What one tab equals
+set shiftwidth=4                       " Number of spaces for indentation
+set softtabstop=4                      " Same as tabstop, but in insert mode
+set expandtab                          " Replace tabs with spaces
+set autoindent                         " Automatic indentation
+syntax on                              " Syntax highlighting
+set termguicolors                      " Enable true colors
 
-" Цветовая схема
+" Color scheme
 colorscheme carbonfox
 " colorscheme tokyonight-night
 " colorscheme catppuccin
 " colorscheme kanagawa
 " colorscheme onedark
 
-" Горячие клавиши для поиска
+" Hotkeys for search
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" Файловое дерево NERDTree
+" NERDTree file tree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-" Управление буферами
+" Buffer management
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <leader>bd :bd<CR>
@@ -92,41 +92,41 @@ nnoremap <leader>bd :bd<CR>
 nnoremap <leader>gs :Git<CR>
 nnoremap <leader>gb :Git blame<CR>
 
-" Lua конфигурации
+" Lua configurations
 lua << EOF
--- Статусная строка
+-- Status line
 require('lualine').setup({
-  options = { theme = 'auto' }  -- Автоматически подхватит вашу тему
+  options = { theme = 'auto' }  -- Will automatically pick up your theme
 })
 
--- Дерево синтаксиса
+-- Syntax tree
 require('nvim-treesitter.configs').setup({
   ensure_installed = {"lua", "python", "javascript", "typescript", "json", "c", "cpp", "java"},
   highlight = { enable = true },
 })
 
--- Автозакрытие скобок
+-- Auto-closing brackets
 require('nvim-autopairs').setup({})
 
--- Буферная линия
+-- Buffer line
 require('bufferline').setup({})
 
--- Git знаки
+-- Git signs
 require('gitsigns').setup({})
 
 -- Which-key
 require('which-key').setup({})
 
--- Mason (LSP менеджер)
+-- Mason (LSP manager)
 require('mason').setup()
 require('mason-lspconfig').setup({
-  ensure_installed = {}  -- Добавьте нужные LSP серверы
+  ensure_installed = {}  -- Add needed LSP servers
 })
 EOF
 
 function! HexDump()
     if empty(expand('%')) || !filereadable(expand('%'))
-        echohl Error | echo "Сохраните файл на диск!" | echohl None
+        echohl Error | echo "Save the file to disk!" | echohl None
         return
     endif
 
@@ -152,8 +152,8 @@ function! HexDump()
 
     if v:shell_error
         echohl Error
-        echo "Финальная команда: " . l:cmd
-        echo "Ошибка (код " . v:shell_error . "):"
+        echo "Final command: " . l:cmd
+        echo "Error (code " . v:shell_error . "):"
         echo l:output
         echohl None
         return
@@ -168,10 +168,10 @@ endfunction
 
 command! Hex call HexDump()
 
-" Переключиться в редактируемый hex-режим
+" Switch to editable hex mode
 command! HexEdit call s:HexEditToggle(1)
 
-" Вернуться в бинарный режим
+" Return to binary mode
 command! HexSave call s:HexEditToggle(0)
 
 function! s:HexEditToggle(to_hex)
@@ -186,30 +186,30 @@ function! s:HexEditToggle(to_hex)
     set shellxquote=
 
     if a:to_hex
-        " Конвертируем текущий буфер в hex
+        " Convert current buffer to hex
         let l:cmd = '"' . l:xxd . '"'
     else
-        " Конвертируем hex-буфер обратно в бинарный
+        " Convert hex buffer back to binary
         let l:cmd = '"' . l:xxd . '" -r'
     endif
 
-    " Применяем фильтр к текущему буферу
+    " Apply filter to current buffer
     execute '%!' . l:cmd
 
-    " Восстанавливаем настройки
+    " Restore settings
     let &shell = l:old_shell
     let &shellcmdflag = l:old_shellcmdflag
     let &shellxquote = l:old_shellxquote
 
     if v:shell_error
-        echohl Error | echo "Ошибка при конвертации через xxd" | echohl None
+        echohl Error | echo "Error during conversion via xxd" | echohl None
         return
     endif
 
     if a:to_hex
         setlocal filetype=xxd
-        echo "Режим hex-редактирования включён. После изменений выполнить :HexSave"
+        echo "Hex editing mode enabled. After changes execute :HexSave"
     else
-        echo "Файл преобразован обратно в бинарный формат. Выполнить :w для сохранения."
+        echo "File converted back to binary format. Execute :w to save."
     endif
 endfunction
