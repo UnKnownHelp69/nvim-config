@@ -8,12 +8,12 @@ My nvim config. This config only for windows, i have made some fixes for windows
 |---------|-----------|
 | \<leader\>ff | Find files |
 | \<leader\>fg | Find text in files |
-| \<leader\>fb | switch buffers over |
-| \<leader\>fh| help |
+| \<leader\>fb | Switch buffers over |
+| \<leader\>fh| Help |
 | \<leader\>n | Focus on tree |
 | \<C-n\> | Open tree |
-| \<C-t\> | switch tree over |
-| \<C-f\> | find current file |
+| \<C-t\> | Switch tree over |
+| \<C-f\> | Find current file |
 | \<Tab\> | Next buffer |
 | \<S-Tab\> | Previous buffer |
 | \<leader\>bd | Close buffer |
@@ -40,7 +40,7 @@ mkdir ~/AppData/Local/nvim
 nvim
 ```
 
-- In nvim:
+- Inside nvim:
 
 ```nvim
 :PlugInstall
