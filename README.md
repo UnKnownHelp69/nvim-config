@@ -23,6 +23,18 @@ My nvim config. This config only for windows, i have made some fixes for windows
 | :HexEdit | Edit hex |
 | :HexSave | Save hex |
 
+## How to change theme
+
+Find line with color schemes and uncomment theme you want to use:
+
+```vim
+" Цветовая схема
+" colorscheme carbonfox
+" colorscheme tokyonight-night
+" colorscheme catppuccin
+" colorscheme kanagawa
+" colorscheme onedark
+```
 
 
 ## Quick start
