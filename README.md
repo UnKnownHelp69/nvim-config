@@ -6,19 +6,19 @@ My nvim config. This config only for windows, i have made some fixes for windows
 
 | Command | What does |
 |---------|-----------|
-| <leader>ff | Find files |
-| <leader>fg | Find text in files |
-| <leader>fb | switch buffers over |
-| <leader>fh| help |
-| <leader>n | Focus on tree |
-| <C-n> | Open tree |
-| <C-t> | switch tree over |
-| <C-f> | find current file |
-| <Tab> | Next buffer |
-| <S-Tab> | Previous buffer |
-| <leader>bd | Close buffer |
-| <leader>gs | Git status |
-| <leader>gb | Git blame |
+| \<leader\>ff | Find files |
+| \<leader\>fg | Find text in files |
+| \<leader\>fb | switch buffers over |
+| \<leader\>fh| help |
+| \<leader\>n | Focus on tree |
+| \<C-n\> | Open tree |
+| \<C-t\> | switch tree over |
+| \<C-f\> | find current file |
+| \<Tab\> | Next buffer |
+| \<S-Tab\> | Previous buffer |
+| \<leader\>bd | Close buffer |
+| \<leader\>gs | Git status |
+| \<leader\>gb | Git blame |
 | :Hex | Viewing hex-dump |
 | :HexEdit | Edit hex |
 | :HexSave | Save hex |
