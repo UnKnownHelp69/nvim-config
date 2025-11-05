@@ -68,6 +68,8 @@ set termguicolors                      " Подключаем топ цвета
 colorscheme carbonfox
 " colorscheme tokyonight-night
 " colorscheme catppuccin
+" colorscheme kanagawa
+" colorscheme onedark
 
 " Горячие клавиши для поиска
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
