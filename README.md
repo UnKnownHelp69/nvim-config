@@ -28,7 +28,7 @@ My nvim config. This config only for windows, i have made some fixes for windows
 Find line with color schemes and uncomment theme you want to use:
 
 ```vim
-" Цветовая схема
+" Color scheme
 " colorscheme carbonfox
 " colorscheme tokyonight-night
 " colorscheme catppuccin
@@ -36,6 +36,14 @@ Find line with color schemes and uncomment theme you want to use:
 " colorscheme onedark
 ```
 
+## Features
+
+- **Themes**: Catppuccin, Tokyonight, Kanagawa, Nightfox, Onedark
+- **Status bar**: icons and buffer tabs
+- **NERDTree**
+- **Hints, error checking and auto-completion**: Treesitter, CoC.nvim, LSP server - Mason, auto-closing parenthesises.
+- **Navigations**: Telescope, Buffers, Git
+- **Hex**: hex redactor right in nvim.
 
 ## Quick start
 
